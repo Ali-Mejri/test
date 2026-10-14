@@ -1,0 +1,54 @@
+/* TP 3 — Grilles avancées et Responsive */
+
+/* Question 1 — mobile : 1 colonne et espace régulier de 1rem */
+.produits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Question 2 — largeur maximale 1100px, marge totale 2rem, conteneur centré */
+.conteneur {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+/* Question 3 — dès 700px : 2 colonnes égales */
+@media (min-width: 700px) {
+  .produits {
+    grid-template-columns:1fr;
+  }
+}
+
+/* Question 4 — dès 1000px : 3 colonnes égales */
+@media (min-width: 1000px) {
+  .produits {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Question 5 — carte vedette sur 2 colonnes */
+.produit--vedette {
+  grid-column: 1 / 3;
+}
+
+/* Question 6 — carte longue sur 2 lignes */
+.produit--long {
+  grid-row: 1 / 3;
+}
+
+/* Question 7 — images et vidéos fluides, proportions conservées */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Question 8 — hauteur 150px, espace 1.25rem, angles 14px, fond #e9e1ff */
+.produit {
+  min-height: 150px;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: #f55454;
+}
